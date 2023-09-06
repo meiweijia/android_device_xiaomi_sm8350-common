@@ -6,6 +6,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+LOCAL_CFLAGS += -fstack-protector
+
 ifneq ($(filter haydn lisa odin renoir venus,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
